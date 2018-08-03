@@ -21,8 +21,8 @@
 		method:'GET',
 		dataType: 'JSONP',
 		success: function (data) {
-			var get_element = document.getElementByName("username")
-			get_element.innerHTML= "name: ";
+			var get_element = document.getElementById("username")
+			get_element.innerHTML = "data.response[0].first_name";
 		}
 
 	});
@@ -47,7 +47,7 @@
 (if: _job is 1)[(link-goto: &quot;Обещал - возьмусь! За дело…&quot;)]
 (if: _sleep is 2)[(link-goto: &quot;Честно? Посплю ещё&quot;)]
 (else:)[Хватит спать]
-</tw-passagedata><tw-passagedata pid="3" name="Честно? Посплю ещё" tags="" position="1300,203" size="100,100">$username Вы либо лентяй, либо фрилансер - спать до поздна. Что скажете в своё оправдание?
+</tw-passagedata><tw-passagedata pid="3" name="Честно? Посплю ещё" tags="" position="1300,203" size="100,100"><div id="username"></div> Вы либо лентяй, либо фрилансер - спать до поздна. Что скажете в своё оправдание?
 (set: _job to 1)
 (Set: $freelancer to 1)
 (Set: $specialist to 1)
