@@ -15,19 +15,19 @@
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"><script type="text/javascript"> 
-            VK.init(function(){
-                alert("good");
-            }, function(){
-                alert("bad");
-            }, '5.80');
-        </script>
-        
-        <script type="text/javascript">
-            VK.api("users.get", {'user_ids' : 1}, function(data) { 
-               console.log(data.response[0].first_name);
-            });
-        </script></script><tw-passagedata pid="1" name="Старт" tags="" position="900,0" size="100,100">Иногда, так бывает, что просыпаешься и хочешь, чтобы этот день был необычным. Чаще всего, эта мысль просто исчезает, пока поднимаешься с кровати. И день идёт по своей колее.
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"><script src="https://vk.com/js/api/openapi.js?158" type="text/javascript"></script>
+<script type="text/javascript">
+  VK.init({
+    apiId: 6649825
+  });
+</script>
+<script>
+VK.Api.call('users.get', {user_ids: 6492, v:"5.80"}, function(r) {
+  if(r.response) {
+    alert('Привет, ' + r.response[0].first_name);
+  }
+});
+</script></script><tw-passagedata pid="1" name="Старт" tags="" position="900,0" size="100,100">Иногда, так бывает, что просыпаешься и хочешь, чтобы этот день был необычным. Чаще всего, эта мысль просто исчезает, пока поднимаешься с кровати. И день идёт по своей колее.
 [[Но сегодня - не так..]]</tw-passagedata><tw-passagedata pid="2" name="Но сегодня - не так.." tags="" position="998,196" size="100,100">Привет, вторник.
 Писклявый рингтон затаился на пару минут. Вернулась утренняя тишина утро. Город вокруг ещё спит.
 С вечера вы дали себе обещание завтра разгрести все дела, которые давно накопились.
